@@ -3,7 +3,7 @@
     <groupId>de.jollyday</groupId>
     <artifactId>jollyday</artifactId>
     <name>Jollyday</name>
-    <version>0.5.2-SNAPSHOT</version>
+    <version>0.5.2-rototor1</version>
     <description>
         This API determines the holidays for a given year, country/name and eventually state/region. The holiday data is
         stored in XML files (one for each country) and will be read from the classpath. You can provide your own holiday
@@ -280,19 +280,14 @@
             </plugin>
         </plugins>
     </reporting>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <site>
-            <id>sourceforge.net</id>
-            <url>scp://diedrichsen,jollyday@shell.sourceforge.net/home/project-web/jollyday/htdocs</url>
-            <name>Sourceforge Site</name>
-        </site>
-    </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>repo-deploy</id>
+			<url>http://ems:emsems@10.50.3.5:8081/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>repo-deploy-snapshot</id>
+			<url>http://ems:emsems@10.50.3.5:8081/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
